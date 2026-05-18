@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Happiness Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+
+<body>
+    <header>
+        <h1>World Happiness Report</h1>
+        <p class="subtitle">Interactive Data Dashboard (2011–2025)</p>
+    </header>
+
+    <main>
+        <div class="chart-container">
+            <div id="chart-top20"></div>
+        </div>
+        <div class="chart-container">
+            <div id="chart-bottom20"></div>
+        </div>
+        <p>The lower the life evaluation score, the less happy they are.<br>
+        Example: 2025's lowest is Afghanistan</p><br>
+        <div class="chart-container">
+            <div id="chart-scatter"></div>
+        </div>
+        <div class="chart-container chart-with-timeline">
+            <div id="chart-line"></div>
+            <section class="timeline-section">
+                <h2>Key World Events (2011–2025)</h2>
+                <div class="year-selector-container">
+                    <label for="year-select">Select Year: </label>
+                    <select id="year-select"></select>
+                </div>
+                <ul id="events-list" class="events-list"></ul>
+            </section>
+        </div>
+        <p>The blue line represents the global average life evaluation over the selected period.</p><br>
+        <div class="chart-container">
+            <div id="chart-factor"></div>
+        </div>
+        <p><strong>Log GDP per capita:</strong><br>
+            A measure of a country’s average income, showing that wealthier nations tend to report higher happiness.<br>
+            <strong>Social support:</strong><br>
+            The extent to which people feel they have someone to count on in times of trouble.<br>
+            <strong>Healthy life expectancy:</strong><br>
+            The number of years a person is expected to live in good health, capturing physical well‑being.<br>
+            <strong>Freedom to make life choices:</strong><br>
+            How much freedom people have to make life choices.<br>
+            <strong>Generosity:</strong><br>
+            How common donating or helping strangers is, reflecting a culture of giving.<br>
+            <strong>Perceptions of corruption:</strong><br>
+            How widespread people think corruption is in government and business—lower perceived corruption supports
+            happiness.<br>
+            <strong>Dystopia + residual:</strong><br>
+            A baseline comparison; it represents the happiness predicted for a hypothetical country with the lowest
+            possible scores on the six factors above, plus any unexplained influences.
+        </p>
+    </main>
+
+    <footer>
+        <p>Data: World Happiness Report 2011–2025</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
